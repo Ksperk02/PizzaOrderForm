@@ -1,0 +1,66 @@
+body {
+    margin: 30px;
+    padding: 0;
+    font: 1em verdana, arial, sans-serif;
+    font-size: 100%;
+}
+
+div.container {
+    width: 90%;
+    margin: auto auto 10px;
+}
+
+ul.navBar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.navBar li {
+    display: inline;
+}
+
+ul.navBar li a {
+    padding: 3px 5px;
+    background-color: #ccc;
+    color: #000;
+    text-decoration: none;
+}
+
+ul.navBar li a.selected, ul.navBar li a:hover {
+    background-color: #333;
+    color: #fff;
+    padding-top: 7px;
+}
+
+ul.navBar li a:focus {
+    outline: 0;
+}
+
+div.tabs > div {
+    padding: 5px;
+    margin-top: 3px;
+    border: 5px solid #333;
+}
+
+div.tabs > div h2 {
+    margin-top: 0;
+}
+
+#Details {
+    background-color: #FFFFFF;
+}
+
+#Info {
+    background-color: #FFFFFF;
+    display: none;
+}
+
+#Confirmation {
+    background-color: #FFFFFF;
+    display: none;
+}
+
+.waste {
+    min-height: 1000px;
+}

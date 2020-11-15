@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ol' Sperks 'Za :: Details</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="zaJava.js"></script>
+    <link rel="stylesheet" href="zaStyle.css">
+</head>
+<body id="page">
+<div class="tabs">
+    <ul class="navBar">
+        <li><a href="index.html#Details" class="navTab">Details</a></li>
+        <li><a href="index.html#Info" class="navTab">Delivery Info</a></li>
+        <li><a href="index.html#Confirmation" class="navTab">Confirmation</a></li>
+    </ul>
+    <div id="Details" class="divTab">
+        <h1>Pizza Details</h1>
+        <form id="pizzaInfo">
+            <div id="pizzaSize">
+                <h2>What Type of 'Za, Player?</h2>
+                <h3>Type</h3>
+                <fieldset>
+                    <label>
+                        <input type="radio" value="Thin" name="type"> Thin
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" value="Pan" name="type"> Pan
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" value="Gluten Free" name="type"> Gluten Free
+                    </label>
+                </fieldset>
+                <h3>Size</h3>
+                <fieldset>
+                    <label>
+                        <input type="radio" value="Small" name="size"> Small ($7.00)
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" value="Medium" name="size"> Medium ($9.00)
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" value="Large" name="size"> Large ($12.00)
+                    </label>
+                </fieldset>
+            </div>
+            <br>
+            <div id="toppings">
+                <h2>Toppings, My Dude.</h2>
+                <h3>Non-Meats ($1.00 ea.)</h3>
+                <fieldset>
+                    <label>
+                        <input type="checkbox" value=" Cheese" name="nonMeats"> Cheese
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" value=" Green Peppers" name="nonMeats"> Green Peppers
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" value=" Onions" name="nonMeats"> Onions
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" value=" Banana peppers" name="nonMeats"> Banana Peppers
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" value=" Blue cheese" name="nonMeats"> Blue Cheese
+                    </label>
+                </fieldset>
+                <h3>Meats ($1.50 ea.)</h3>
+                <fieldset>
+                    <label>
+                        <input type="checkbox" value=" Italian Sausage" name="meats"> Italian Sausage
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" value=" Pepperoni" name="meats"> Pepperoni
+                    </label>
+                    <br>
+                    <lable>
+                        <input type="checkbox" value=" Chicken" name="meats"> Chicken
+                    </lable>
+                    <br>
+                    <label>
+                        <input type="checkbox" value=" Bacon" name="meats"> Bacon
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" value=" Italian beef" name="meats"> Italian Beef
+                    </label>
+                </fieldset>
+            </div>
+        </form>
+    </div>
+    <div id="Info" class="divTab">
+        <h1>Delivery Details</h1>
+        <fieldset>
+            <form>
+                <div>
+                    <h2>Enter Information</h2>
+                    <table>
+                        <tr>
+                            <td>Enter Name<span class="required">*</span></td>
+                            <td><label><input type="text" id="name" placeholder="Fist, Last Name" required></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Street Address<span class="required">*</span></td>
+                            <td><label><input type="text" id="street" placeholder="Street Address" required/></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Apt/Suite #</td>
+                            <td><label><input type="text" id="apt" placeholder="Apt #" size="5"/></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>City<span class="required">*</span></td>
+                            <td><label><input type="text" id="city" placeholder="City" required/></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>State<span class="required">*</span></td>
+                            <td><label><input type="text" id="state" placeholder="WI" size="2" required/> </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Zip Code<span class="required">*</span></td>
+                            <td><label><input type="text" id="zip" placeholder="Zip" size="5" required/> </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number<span class="required">*</span></td>
+                            <td><label><input type="tel" id="phone" title="xxx-xxx-xxxx"
+                                              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx"
+                                              required></label></td>
+                        </tr>
+                    </table>
+                    <br>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <div id="Confirmation" class="divTab">
+        <h1>Confirmation</h1>
+        <div>
+            <h2>Order Details</h2>
+            <fieldset class="fieldset" id="contactDetails">
+                <legend class="legend">Contact Details</legend>
+                <span>Name: <span class="output" id="outputName"></span></span><br>
+                <span>Address: <span class="output" id="outputStreet"></span></span><br>
+                <span><span class="output" id="outputCity"></span></span><br>
+                <span>Phone: <span class="output" id="outputPhone"></span></span><br>
+            </fieldset>
+            <br>
+            <fieldset class="fieldset" id="pizzaDetails">
+                <legend class="legend">Pizza Details</legend>
+                <span>Size: <span class="output" id="outputSize"></span></span><br>
+                <span>Crust: <span class="output" id="outputCrust"></span></span><br>
+                <span>Veggie Toppings: <span class="output" id="outputVeggies"></span></span><br>
+                <span>Meat Toppings: <span class="output" id="outputMeat"></span></span><br>
+            </fieldset>
+            <br>
+            <fieldset class="fieldset" id="costDetails">
+                <legend class="legend">Cost Details</legend>
+                <span>Subtotal: <span class="output">$</span><span class="output" id="outputSubTotal"></span></span><br>
+                <span>Tax: <span class="output">$</span><span class="output" id="outputTaxTotal"></span></span><br>
+                <span>Delivery Fee: <span class="output">$2.00</span></span><br>
+                <span>Grand Total: <span class="output">$</span><span class="output"
+                                                                      id="outputGrandTotal"></span></span><br>
+            </fieldset>
+            <br><br>
+            <form id="placeOrder">
+                <input type="button" value="Place Order" id="outputButton"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
